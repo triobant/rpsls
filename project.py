@@ -14,7 +14,22 @@ class Game():
         self.computer_name = Player('computer')
         self.num_rounds = num_rounds
         self.round_number = round_number
-    ...
+
+
+    def determine_winner(self):
+        ...
+
+
+    def play_round(self):
+        ...
+
+
+    def get_player_choice(self):
+        ...
+
+
+    def display_rules(self):
+        ...
 
 
 def main():
