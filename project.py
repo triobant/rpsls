@@ -16,8 +16,14 @@ class Game():
         self.round_number = round_number
 
 
-    def determine_winner(self):
-        ...
+    def determine_winner(self, player_choice, computer_choice):
+        rules = {
+                'rock': ['scissors', 'lizard'],
+                'paper': ['rock', 'spock'],
+                'scissors': ['paper', 'lizard'],
+                'lizard': ['paper', 'spock'],
+                'spock': ['rock', 'scissors']
+        }
 
 
     def play_round(self):
@@ -29,7 +35,18 @@ class Game():
 
 
     def display_rules(self):
-        ...
+        rules = """Scissors cuts paper,
+Paper covers rock,
+Rock crushes lizard,
+Lizard poisons Spock,
+Spock smashes scissors,
+Scissors decapitates lizard,
+Lizard eats paper,
+Paper disproves Spock,
+Spock vaporizes rock,
+and as it always has,
+Rock crushes scissors."""
+        print(f'\nRules of the Game: {rules}')
 
 
 def main():
