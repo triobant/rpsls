@@ -24,6 +24,12 @@ class Game():
                 'lizard': ['paper', 'spock'],
                 'spock': ['rock', 'scissors']
         }
+        if player_choice == computer_choice:
+            return 'Draw!', 0
+        elif computer_choice in rules[player_choice]:
+            return 'You win!'
+        else:
+            return 'Computer wins!'
 
 
     def play_round(self):
