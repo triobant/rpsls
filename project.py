@@ -56,7 +56,9 @@ Rock crushes scissors."""
 
 
 def main():
-    ...
+    game = Game(player_name, num_rounds)
+    while game.round_number < game.num_rounds:
+        game.play_round()
 
 
 if __name__ == '__main__':
