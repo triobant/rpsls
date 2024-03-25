@@ -27,9 +27,9 @@ class Game():
         if player_choice == computer_choice:
             return 'Draw!', 0
         elif computer_choice in rules[player_choice]:
-            return 'You win!'
+            return 'You win!', 1
         else:
-            return 'Computer wins!'
+            return 'Computer wins!', -1
 
 
     def play_round(self):
@@ -37,6 +37,8 @@ class Game():
 
 
     def get_player_choice(self):
+        while True:
+            ...
         ...
 
 
