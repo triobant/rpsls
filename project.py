@@ -13,7 +13,7 @@ class Game():
         self.player_name = Player(player_name)
         self.computer_name = Player('computer')
         self.num_rounds = num_rounds
-        self.round_number = round_number
+        self.round_number = 0
 
 
     def determine_winner(self, player_choice, computer_choice):
