@@ -38,6 +38,9 @@ class Game():
 
     def get_player_choice(self):
         while True:
+            print('Choose your move: ')
+            for i, choice in enumerate(self.choices, start=1):
+                print(f'{i}. {choice}')
             ...
         ...
 
