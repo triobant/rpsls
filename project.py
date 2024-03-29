@@ -41,6 +41,8 @@ class Game():
             print('Choose your move: ')
             for i, choice in enumerate(self.choices, start=1):
                 print(f'{i}. {choice}')
+            choice_index = input("Enter your choice (0-7): ")
+            print(choice_index)
             ...
         ...
 
