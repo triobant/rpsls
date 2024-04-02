@@ -33,7 +33,8 @@ class Game():
 
 
     def play_round(self):
-        ...
+        player_choice = self.get_player_choice()
+        print(player_choice)
 
 
     def get_player_choice(self):
