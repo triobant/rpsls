@@ -38,7 +38,14 @@ class Game():
         print(f'\nYou chose: {player_choice}')
         print(f'Computer chose: {computer_choice}')
         result, score = self.determine_winner(player_choice, computer_choice)
-        print(result, score)
+
+        if score == 1:
+            self.player.score += 1
+        elif score == -1:
+            self.computer.score += 1
+
+        self.round_number += 1
+        print(f'Your score: {self.player.score}, Computer score: {self.computer.score}\n')
 
 
     def get_player_choice(self):
