@@ -11,7 +11,7 @@ class Game():
     def __init__(self, player_name, num_rounds):
         self.choices = ['rock', 'paper', 'scissors', 'lizard', 'spock']
         self.player_name = Player(player_name)
-        self.computer_name = Player('computer')
+        self.computer_name = Player('Computer')
         self.num_rounds = num_rounds
         self.round_number = 0
 
@@ -38,6 +38,7 @@ class Game():
         print(f'\nYou chose: {player_choice}')
         print(f'Computer chose: {computer_choice}')
         result, score = self.determine_winner(player_choice, computer_choice)
+        print(result)
 
         if score == 1:
             self.player.score += 1
