@@ -4,11 +4,13 @@ from io import StringIO
 
 
 class TestGame:
-    ...
 
 
     def test_valid_player_choice(self, monkeypatch):
-        ...
+        game = Game('Player', 1)
+        monkeypatch.setattr('sys.stdin', StringIO('1\n'))
+        player_choice = game.get_player_choice()
+        assert player_choice in game.choices
 
 
     def test_initial_player_score(self):
