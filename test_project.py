@@ -7,14 +7,15 @@ class TestGame:
 
 
     def test_valid_player_choice(self, monkeypatch):
-        game = Game('Player', 1)
+        game = Game('Test Valid Player Choice', 1)
         monkeypatch.setattr('sys.stdin', StringIO('1\n'))
         player_choice = game.get_player_choice()
         assert player_choice in game.choices
 
 
     def test_initial_player_score(self):
-        ...
+        game = Game('Test Player Score', 1)
+        assert game.player.score == 0
 
 
     def test_round_number_increase(self, monkeypatch):
