@@ -19,7 +19,11 @@ class TestGame:
 
 
     def test_round_number_increase(self, monkeypatch):
-        ...
+        game = Game('Test Round Number Increase', 1)
+        monkeypatch.setattr('sys.stdin', StringIO('1\n'))
+        game.round_number = 0
+        game.play_round()
+        assert game.round_number == 1
 
 
     def test_invalid_player_choice(self, monkeypatch):
