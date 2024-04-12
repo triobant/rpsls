@@ -27,7 +27,10 @@ class TestGame:
 
 
     def test_invalid_player_choice(self, monkeypatch):
-        ...
+        game = Game('Test Invalid Player Choice', 1)
+        monkeypatch.setattr('sys.stdin', StringIO('1\n'))
+        with pytest.raises(ValueError):
+            game.get_player_choice('Invalid choice')
 
 
     def test_game_end(self, monkeypatch):
