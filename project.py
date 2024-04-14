@@ -56,7 +56,7 @@ class Game():
                 print(f'{i}. {choice}')
             print('0. Quit')
             print('6. Read rules')
-            choice_index = input("Enter your choice (1-6): ")
+            choice_index = input('Enter your choice (1-6): ')
 
             if choice_index == '0':
                 print('Thanks for playing!')
@@ -73,7 +73,7 @@ class Game():
 
 
     def display_rules(self):
-        rules = """Scissors cuts paper,
+        rules = '''Scissors cuts paper,
 Paper covers rock,
 Rock crushes lizard,
 Lizard poisons Spock,
@@ -83,7 +83,7 @@ Lizard eats paper,
 Paper disproves Spock,
 Spock vaporizes rock,
 and as it always has,
-Rock crushes scissors."""
+Rock crushes scissors.'''
         print(f'\nRules of the Game: {rules}')
 
 
