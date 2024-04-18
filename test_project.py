@@ -34,7 +34,10 @@ class TestGame:
 
 
     def test_game_end(self, monkeypatch):
-        ...
+        game = Game('Test Game End', 1)
+        monkeypatch.setattr('sys.stdin', StringIO('1\n'))
+        game.round_number = 3
+        assert game.round_number == game.num_rounds
 
 
     def test_display_player_choice(self, monkeypatch):
