@@ -41,7 +41,7 @@ class TestGame:
 
 
     def test_display_player_choice(self, monkeypatch):
-        ...
+        game = Game('Test Display Player Choice', 1)
 
 
     def test_valid_computer_choice(self):
