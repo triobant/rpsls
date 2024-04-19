@@ -42,6 +42,8 @@ class TestGame:
 
     def test_display_player_choice(self, monkeypatch):
         game = Game('Test Display Player Choice', 1)
+        monkeypatch.setattr('sys.stdin', StringIO('1\n'))
+        assert game.get_player_choice('Enter your choice (1-6): ') == game.choices[0]
 
 
     def test_valid_computer_choice(self):
