@@ -47,7 +47,9 @@ class TestGame:
 
 
     def test_valid_computer_choice(self):
-        ...
+        game = Game('Test Valid Computer choice', 1)
+        computer_choice = game.computer_choice()
+        assert computer_choice in game.choices
 
 
     def test_invalid_computer_choice(self):
