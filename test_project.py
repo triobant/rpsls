@@ -53,4 +53,8 @@ class TestGame:
 
 
     def test_invalid_computer_choice(self):
-        ...
+        game = Game('Test Invalid Computer choice', 1)
+        computer_choice = 'invalid'
+        assert computer_choice not in game.choices
+        with pytest.raises(ValueError):
+            game.computer_choice('invalid choice')
