@@ -37,18 +37,18 @@ class Game():
         }
 
         if player_choice == computer_choice:
-            return 'Draw!', 0
+            return f'Draw!', 0
         elif computer_choice in rules[player_choice]:
-            return 'You win!', 1
+            return f'{Colors.RED}You win!{Colors.RESET}', 1
         else:
-            return 'Computer wins!', -1
+            return f'{Colors.BLUE}Computer wins!{Colors.RESET}', -1
 
 
     def play_round(self):
         player_choice = self.get_player_choice()
         computer_choice = random.choice(self.choices)
-        print(f'\nYou chose: {player_choice}')
-        print(f'Computer chose: {computer_choice}')
+        print(f'\n{Colors.RED}You chose: {player_choice}{Colors.RESET}')
+        print(f'{Colors.BLUE}Computer chose: {computer_choice}{Colors.RESET}')
         result, score = self.determine_winner(player_choice, computer_choice)
         print(result)
 
