@@ -63,11 +63,10 @@ class Game():
 
     def get_player_choice(self):
         while True:
-            print('Choose your move: ')
+            print(f'\nChoose your move!\n')
             for i, choice in enumerate(self.choices, start=1):
                 print(f'{i}. {choice}')
-            print('0. Quit')
-            print('6. Read rules')
+            print(f'0. Quit\n6. Read rules\n')
             choice_index = input('Enter your choice (1-6): ')
 
             if choice_index == '0':
@@ -81,7 +80,7 @@ class Game():
             if choice_index.isdigit() and 1 <= int(choice_index) <= 5:
                 return self.choices[int(choice_index) - 1]
             else:
-                print('Invalid choice. Please choose a number between 0 and 7')
+                print('Invalid choice. Please choose a number between 1 and 6')
 
 
     def display_rules(self):
