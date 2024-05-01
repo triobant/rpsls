@@ -58,12 +58,12 @@ class Game():
             self.computer.score += 1
 
         self.round_number += 1
-        print(f'Your score: {self.player.score}, Computer score: {self.computer.score}\n')
+        print(f'{Colors.RED}Your score: {self.player.score}{Colors.RESET}, {Colors.BLUE}Computer score: {self.computer.score}{Colors.RESET}\n')
 
 
     def get_player_choice(self):
         while True:
-            print(f'\nChoose your move!\n')
+            print(f'\n{Colors.RED}Choose your move!{Colors.RESET}\n')
             for i, choice in enumerate(self.choices, start=1):
                 print(f'{i}. {choice}')
             print(f'0. Quit\n6. Read rules\n')
