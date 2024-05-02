@@ -39,9 +39,9 @@ class Game():
         if player_choice == computer_choice:
             return f'Draw!', 0
         elif computer_choice in rules[player_choice]:
-            return f'{Colors.RED}You win!{Colors.RESET}', 1
+            return f'{Colors.RED}You score!{Colors.RESET}', 1
         else:
-            return f'{Colors.BLUE}Computer wins!{Colors.RESET}', -1
+            return f'{Colors.BLUE}Computer scores!{Colors.RESET}', -1
 
 
     def play_round(self):
