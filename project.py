@@ -44,6 +44,15 @@ class Game():
             return f'{Colors.BLUE}Computer scores!{Colors.RESET}', -1
 
 
+    def determine_final_winner(self):
+        if player.score > computer.score:
+            return f'You are the champion!'
+        elif player.score < computer.score:
+            return f'Computer is the champion!'
+        else:
+            return f'Draw?!'
+
+
     def play_round(self):
         player_choice = self.get_player_choice()
         computer_choice = random.choice(self.choices)
