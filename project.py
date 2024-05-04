@@ -43,9 +43,9 @@ class Game():
 
 
     def determine_final_winner(self):
-        if player.score > computer.score:
+        if self.player.score > self.computer.score:
             return f'You are the champion!'
-        elif player.score < computer.score:
+        elif self.player.score < self.computer.score:
             return f'Computer is the champion!'
         else:
             return f'Draw?!'
@@ -111,6 +111,7 @@ def main():
     game = Game(player_name, num_rounds)
     while game.round_number < game.num_rounds:
         game.play_round()
+    game.determine_final_winner()
 
 
 if __name__ == '__main__':
