@@ -44,11 +44,11 @@ class Game():
 
     def determine_final_winner(self):
         if self.player.score > self.computer.score:
-            return f'You are the champion!'
+            return f'{Colors.RED}You are the champion!{Colors.RESET}'
         elif self.player.score < self.computer.score:
-            return f'Computer is the champion!'
+            return f'{Colors.BLUE}Computer is the champion!{Colors.RESET}'
         else:
-            return f'Draw?!'
+            return f'{Colors.YELLOW}Draw?!{Colors.RESET}'
 
 
     def play_round(self):
