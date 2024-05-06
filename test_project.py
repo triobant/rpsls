@@ -58,3 +58,7 @@ class TestGame:
         assert computer_choice not in game.choices
         with pytest.raises(ValueError):
             game.computer_choice('invalid choice')
+
+
+    def test_determine_final_winner(self):
+        ...
