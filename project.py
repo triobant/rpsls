@@ -34,7 +34,7 @@ class Game():
         }
 
         if player_choice == computer_choice:
-            return f'Draw!', 0
+            return f'{Colors.YELLOW}Draw!{Colors.RESET}', 0
         elif computer_choice in rules[player_choice]:
             return f'{Colors.RED}You score!{Colors.RESET}', 1
         else:
@@ -105,7 +105,7 @@ Rock crushes scissors.'''
 
 
 def main():
-    player_name = input('Player! Please enter your name: ')
+    player_name = str(input('Player! Please enter your name: ').strip())
     num_rounds = int(input(f'Welcome {Colors.RED}{player_name}{Colors.RESET}! Please enter the amount of rounds you want to play: '))
     game = Game(player_name, num_rounds)
     while game.round_number < game.num_rounds:
