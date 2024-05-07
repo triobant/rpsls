@@ -33,6 +33,7 @@ class Game():
                 'spock': ['rock', 'scissors']
         }
 
+
         if player_choice == computer_choice:
             return f'{Colors.YELLOW}Draw!{Colors.RESET}', 0
         elif computer_choice in rules[player_choice]:
@@ -58,10 +59,12 @@ class Game():
         result, score = self.determine_winner(player_choice, computer_choice)
         print(result)
 
+
         if score == 1:
             self.player.score += 1
         elif score == -1:
             self.computer.score += 1
+
 
         self.round_number += 1
         print(f'{Colors.RED}Your score: {self.player.score}{Colors.RESET}, {Colors.BLUE}Computer score: {self.computer.score}{Colors.RESET}\n')
@@ -75,13 +78,16 @@ class Game():
             print(f'0. Quit\n6. Read rules\n')
             choice_index = input('Enter your choice (1-6): ')
 
+
             if choice_index == '0':
                 print('Thanks for playing!')
                 exit()
 
+
             if choice_index == '6':
                 self.display_rules()
                 continue
+
 
             if choice_index.isdigit() and 1 <= int(choice_index) <= 5:
                 return self.choices[int(choice_index) - 1]
