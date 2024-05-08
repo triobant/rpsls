@@ -112,7 +112,7 @@ Rock crushes scissors.'''
 
 def main():
     player_name = str(input('Player! Please enter your name: ').strip())
-    num_rounds = int(input(f'Welcome {Colors.RED}{player_name}{Colors.RESET}! Please enter the amount of rounds you want to play: '))
+    num_rounds = int(input(f'Welcome {Colors.RED}{player_name}{Colors.RESET}!\nPlease enter the amount of rounds you want to play: '))
     game = Game(player_name, num_rounds)
     while game.round_number < game.num_rounds:
         game.play_round()
