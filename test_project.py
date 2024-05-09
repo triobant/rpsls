@@ -60,5 +60,9 @@ class TestGame:
             game.computer_choice('invalid choice')
 
 
-    def test_determine_final_winner(self):
-        ...
+    def test_determine_final_winner(self, monkeypatch):
+        game = Game('Test Final Winner')
+        monkeypatch.setattr('sys.stdin', StringIO('1\n'))
+        game.player.score = 2
+        game.computer.score = 1
+        assert game.player.score > game.computer.score
