@@ -61,7 +61,7 @@ class TestGame:
 
 
     def test_determine_final_winner(self, monkeypatch):
-        game = Game('Test Final Winner')
+        game = Game('Test Final Winner', 1)
         monkeypatch.setattr('sys.stdin', StringIO('1\n'))
         game.player.score = 2
         game.computer.score = 1
