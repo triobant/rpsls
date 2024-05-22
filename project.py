@@ -80,7 +80,7 @@ class Game():
 
 
             if choice_index == '0':
-                print('Thanks for playing!')
+                print(f'\n{Colors.GREEN}Thanks for playing!{Color.RESET}')
                 exit()
 
 
