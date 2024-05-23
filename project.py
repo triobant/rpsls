@@ -91,6 +91,8 @@ class Game():
 
             if choice_index.isdigit() and 1 <= int(choice_index) <= 5:
                 return self.choices[int(choice_index) - 1]
+            elif choice_index == '':
+                return random.choice(self.choices)
             else:
                 print('Invalid choice. Please choose a number between 1 and 6')
 
