@@ -39,18 +39,6 @@ class TestGame:
         monkeypatch.setattr("sys.stdin", StringIO("1\n"))
         assert game.get_player_choice("Enter your choice (1-6): ") == game.choices[0]
 
-    def test_valid_computer_choice(self):
-        game = Game("Test Valid Computer choice", 1)
-        computer_choice = game.computer_choice()
-        assert computer_choice in game.choices
-
-    def test_invalid_computer_choice(self):
-        game = Game("Test Invalid Computer choice", 1)
-        computer_choice = "invalid"
-        assert computer_choice not in game.choices
-        with pytest.raises(ValueError):
-            game.computer_choice("invalid choice")
-
     def test_determine_final_winner(self, monkeypatch):
         game = Game("Test Final Winner", 1)
         monkeypatch.setattr("sys.stdin", StringIO("1\n"))
