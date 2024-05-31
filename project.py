@@ -74,19 +74,20 @@ class Game:
             choice_index = input("Enter your choice (1-6): ")
 
             if choice_index == "0":
-                print(f"\n{Colors.GREEN}Thanks for playing!{Color.RESET}")
+                print(f"\n{Colors.GREEN}Thanks for playing!{Colors.RESET}")
                 exit()
 
             if choice_index == "6":
                 self.display_rules()
                 continue
 
-            if choice_index.isdigit() and 1 <= int(choice_index) <= 5:
-                return self.choices[int(choice_index) - 1]
-            elif choice_index == "":
-                return random.choice(self.choices)
-            else:
-                print("Invalid choice. Please choose a number between 1 and 6")
+            try:
+                if choice_index.isdigit() and 1 <= int(choice_index) <= 5:
+                    return self.choices[int(choice_index) - 1]
+                elif choice_index == "":
+                    return random.choice(self.choices)
+            except Exception as e:
+                print(f"Invalid choice: {e}. Please choose a number between 1 and 6")
 
     def display_rules(self):
         rules = """Scissors cuts paper,
@@ -104,7 +105,7 @@ Rock crushes scissors."""
 
 
 def main():
-    player_name = str(input("Player! Please enter your name: ").strip())
+    player_name = str(input("User?! Please enter your name: ").strip())
     if player_name == "":
         player_name = "User"
     num_rounds = input(
