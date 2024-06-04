@@ -33,11 +33,13 @@ class Game:
         }
 
         if player_choice == computer_choice:
-            return f"{Colors.YELLOW}Draw!{Colors.RESET}", 0
+            return f"{Colors.YELLOW}Draw!{Colors.RESET}"
         elif computer_choice in rules[player_choice]:
-            return f"{Colors.RED}You score!{Colors.RESET}", 1
+            self.player.score += 1
+            return f"{Colors.RED}You score!{Colors.RESET}"
         else:
-            return f"{Colors.BLUE}Computer scores!{Colors.RESET}", -1
+            self.computer.score += 1
+            return f"{Colors.BLUE}Computer scores!{Colors.RESET}"
 
     def determine_final_winner(self):
         if self.player.score > self.computer.score:
@@ -52,13 +54,9 @@ class Game:
         computer_choice = random.choice(self.choices)
         print(f"\n{Colors.RED}You chose: {player_choice}{Colors.RESET}")
         print(f"{Colors.BLUE}Computer chose: {computer_choice}{Colors.RESET}")
-        result, score = self.determine_winner(player_choice, computer_choice)
+        result = self.determine_winner(player_choice, computer_choice)
         print(result)
 
-        if score == 1:
-            self.player.score += 1
-        elif score == -1:
-            self.computer.score += 1
 
         self.round_number += 1
         print(
