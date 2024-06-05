@@ -57,7 +57,6 @@ class Game:
         result = self.determine_winner(player_choice, computer_choice)
         print(result)
 
-
         self.round_number += 1
         print(
             f"{Colors.RED}Your score: {self.player.score}{Colors.RESET}, {Colors.BLUE}Computer score: {self.computer.score}{Colors.RESET}\n"
