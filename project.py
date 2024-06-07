@@ -96,7 +96,7 @@ Paper disproves Spock,
 Spock vaporizes rock,
 and as it always has,
 Rock crushes scissors."""
-        print(f"\nRules of the Game: {rules}")
+        print(f"\nRules of the Game:\n\n{rules}")
 
 
 def main():
