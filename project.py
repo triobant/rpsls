@@ -16,7 +16,7 @@ class Player:
 
 
 class Game:
-    def __init__(self, player_name, num_rounds):
+    def __init__(self, player_name, num_rounds = 3):
         self.choices = ["rock", "paper", "scissors", "lizard", "spock"]
         self.player = Player(player_name)
         self.computer = Player("Computer")
@@ -106,9 +106,6 @@ def main():
     num_rounds = input(
         f"Welcome {Colors.RED}{player_name}{Colors.RESET}!\nPlease enter the amount of rounds you want to play: "
     )
-    if num_rounds == "":
-        num_rounds = 3
-        print(f"Default round number: {num_rounds}")
     game = Game(player_name, int(num_rounds))
     while game.round_number < game.num_rounds:
         print(game.play_round())
