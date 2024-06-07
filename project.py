@@ -52,16 +52,13 @@ class Game:
     def play_round(self):
         player_choice = self.get_player_choice()
         computer_choice = random.choice(self.choices)
-        #        print(f"\n{Colors.RED}You chose: {player_choice}{Colors.RESET}")
-        #        print(f"{Colors.BLUE}Computer chose: {computer_choice}{Colors.RESET}")
         result = self.determine_winner(player_choice, computer_choice)
-        #        print(result)
 
         self.round_number += 1
-        #        print(
-        #            f"{Colors.RED}Your score: {self.player.score}{Colors.RESET}, {Colors.BLUE}Computer score: {self.computer.score}{Colors.RESET}\n{result}"
-        #        )
-        return f"\n{Colors.RED}You chose: {player_choice}{Colors.RESET}\n{Colors.BLUE}Computer chose: {computer_choice}{Colors.RESET}\n{Colors.RED}Your score: {self.player.score}{Colors.RESET}, {Colors.BLUE}Computer score: {self.computer.score}{Colors.RESET}\n{result}\n"
+        return f"""{Colors.RED}You chose: {player_choice}{Colors.RESET}\n{Colors.BLUE}Computer chose: {computer_choice}{Colors.RESET}
+{Colors.RED}Your score: {self.player.score}{Colors.RESET}, {Colors.BLUE}Computer score: {self.computer.score}{Colors.RESET}
+{result}
+"""
 
     def get_player_choice(self):
         while True:
